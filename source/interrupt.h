@@ -9,6 +9,7 @@ struct core;
 #define ICR_DIV_BY_ZERO 1
 #define ICR_INVALID_OPCODE 2
 #define ICR_PAGE_FAULT 3
+#define ICR_PROTECTION_FAULT 4
 
 struct interrupt_event {
 	uint16_t irc;

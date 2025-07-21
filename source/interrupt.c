@@ -22,7 +22,7 @@ bool irc_raise_interrupt(struct irc *irc, uint16_t vector) {
 		// triple fault; reset CPU TODO
 	}
 
-	if (vector <= 3) {
+	if (vector <= 4) {
 		if (irc->in_exception)
 			raise_double_fault = true;
 	} else
@@ -30,7 +30,7 @@ bool irc_raise_interrupt(struct irc *irc, uint16_t vector) {
 
 	const uint64_t mask = (1ULL << vec_mask);
 	if ((mask & irc->core->registers[IMR]) != 0) {
-		if (vector <= 3) {
+		if (vector <= 4) {
 			raise_double_fault = true;
 			goto push;
 		}

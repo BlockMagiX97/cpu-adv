@@ -29,6 +29,7 @@ Interrupt -> Push SP0 (kernel stack)
 Interrupt 1 -> Div by Zero
 Interrupt 2 -> Invalid Opcode
 Interrupt 3 -> Page Fault
+Interrupt 4 -> Protection Fault
 
 Interrupt Routing Chipset (IRC) Hardware Interrupt (timer, keyboard, disk etc) per core
     IRC0 (interrupt 10) -> Timer tick
