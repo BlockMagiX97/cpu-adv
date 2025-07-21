@@ -5,4 +5,4 @@
 
 typedef uintptr_t VirtualAddress_t;
 
-#endif //CONST_H
+#endif // CONST_H

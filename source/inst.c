@@ -76,11 +76,6 @@ uint64_t parse_instruction(struct core *c, struct instruction *inst,
 		uint8_t r1 = vread8(c, new_pc++);
 		uint8_t r2 = vread8(c, new_pc++);
 		if (!is_valid_reg(r1) || !is_valid_reg(r2)) {
-			// nodelay(stdscr, FALSE);
-			// refresh();
-			// getch();
-			// endwin();
-			// assert(0);
 			irc_raise_interrupt(c->irc, ICR_INVALID_OPCODE);
 			return 0;
 		}

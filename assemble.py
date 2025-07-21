@@ -50,50 +50,85 @@ class Assembler:
     _sym       = re.compile(r'^[A-Za-z_]\w*$')
 
     def __init__(self):
-        self.labels = {}
-        self.lines  = []
-        self.binary = bytearray()
+        self.raw_lines: List[Tuple[int,str]] = []
+        self.lines: List[Tuple[int,str]]    = []
+        self.macros: dict                   = {}
+        self.labels: dict                   = {}
+        self.binary: bytearray              = bytearray()
 
-    def load(self, text:str):
+    def load(self, text: str):
         for n, raw in enumerate(text.splitlines(), 1):
             code = re.sub(r';.*|//.*', '', raw).strip()
-            if not code:
-                continue
-            if code.lower().startswith('.org'):
-                raise SyntaxError(f"Line {n}: .org not supported")
-            self.lines.append((n, code))
+            if code:
+                self.raw_lines.append((n, code))
+
+    def unwrap_macros(self):
+        for lineno, code in self.raw_lines:
+            m = re.match(
+                r'^\s*\.?define\s+'
+                r'([A-Za-z_]\w*)'
+                r'(?:\s*=\s*|\s+)'
+                r'(.+)$',
+                code, re.IGNORECASE
+            )
+            if m:
+                name, expr = m.group(1), m.group(2).strip()
+                self.macros[name] = expr
+            else:
+                expanded = code
+                for _ in range(len(self.macros)):
+                    prev = expanded
+                    for name, expr in self.macros.items():
+                        expanded = re.sub(
+                            r'\b' + re.escape(name) + r'\b',
+                            expr, expanded
+                        )
+                    if expanded == prev:
+                        break
+                self.lines.append((lineno, expanded))
 
     def first_pass(self):
         pc = 0
         for lineno, line in self.lines:
-            if self._label_def.match(line):
-                lbl = self._label_def.match(line).group(1)
+            mo = re.match(r'^\s*\.org\s+(.+)$', line, re.IGNORECASE)
+            if mo:
+                addr = self._parse_imm(mo.group(1).strip(), lineno)
+                pc = addr
+                continue
+
+            lm = self._label_def.match(line)
+            if lm:
+                lbl = lm.group(1)
                 if lbl in self.labels:
                     raise SyntaxError(f"Line {lineno}: label `{lbl}` redefined")
                 self.labels[lbl] = pc
-            else:
-                size = self._size_of(line, lineno)
-                pc += size
+                continue
+
+            size = self._size_of(line, lineno)
+            pc += size
 
     def second_pass(self):
         for lineno, line in self.lines:
             if self._label_def.match(line):
                 continue
+            if re.match(r'^\s*\.org\b', line, re.IGNORECASE):
+                continue
             hdr, ops = self._encode_instr(line, lineno, dry_run=False)
             self.binary.extend(hdr)
             self.binary.extend(ops)
 
-    def assemble(self, text:str) -> bytes:
+    def assemble(self, text: str) -> bytes:
         self.load(text)
+        self.unwrap_macros()
         self.first_pass()
         self.second_pass()
         return bytes(self.binary)
 
-    def _size_of(self, line:str, lineno:int) -> int:
+    def _size_of(self, line: str, lineno: int) -> int:
         hdr, ops = self._encode_instr(line, lineno, dry_run=True)
         return len(hdr) + len(ops)
 
-    def _encode_instr(self, line:str, lineno:int, dry_run:bool) -> Tuple[bytes, bytes]:
+    def _encode_instr(self, line: str, lineno: int, dry_run: bool) -> Tuple[bytes, bytes]:
         mdir = re.match(r'^\s*(DB|DW|DD|DQ)\s+(.*)$', line, re.IGNORECASE)
         if mdir:
             directive = mdir.group(1).lower()
@@ -179,7 +214,6 @@ class Assembler:
         if op == 'CALL':
             if cnt!=1: raise SyntaxError(f"Line {lineno}: CALL needs 1 operand")
             a=ops[0]
-            
             if ( self._reg.match(a)
               or self._int.match(a)
               or self._sym.match(a)
@@ -189,8 +223,8 @@ class Assembler:
 
         if op == 'CMOV':
             if cnt==3:
-                c,a,b = ops
-                if c.upper() not in CMovOperandModes.__members__: 
+                c,a,b=ops
+                if c.upper() not in CMovOperandModes.__members__:
                     raise SyntaxError(f"Line {lineno}: bad CMOV cond `{c}`")
                 if self._reg.match(a) and self._reg.match(b):
                     return OperandType.CM
@@ -228,22 +262,20 @@ class Assembler:
             return out
 
         if otype == OperandType.OA:
-            a = ops[0]
+            a=ops[0]
             if self._reg.match(a):
                 mode,val = OneArgumentMode.REGISTER.value, self._parse_reg(a,lineno)
                 out += bytes((mode,val))
-                return out
-            if self._mem.match(a):
+            elif self._mem.match(a):
                 mode = OneArgumentMode.ADDRESS.value
                 addr = self._parse_mem(a,lineno)
                 out.append(mode)
                 out += struct.pack('<Q', addr)
-                return out
-            
-            mode = OneArgumentMode.IMM.value
-            imm  = self._parse_imm(a, lineno)
-            out.append(mode)
-            out += struct.pack('<Q', imm)
+            else:
+                mode = OneArgumentMode.IMM.value
+                imm  = self._parse_imm(a, lineno)
+                out.append(mode)
+                out += struct.pack('<Q', imm)
             return out
 
         if otype == OperandType.CM:

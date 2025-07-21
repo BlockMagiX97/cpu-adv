@@ -1,5 +1,6 @@
 CC := cc
 CFLAGS := -Wall -Wextra -Werror -std=c23 -Isource -include const.h -g -O0
+CFLAGS += `sdl2-config --cflags`
 
 CLANG_DETECTED := $(shell echo | $(CC) -dM -E -x c - | grep -q '__clang__' && echo 1 || echo 0)
 
@@ -13,12 +14,10 @@ TARGET := cpu
 CFILES := $(shell find -L . -type f -name '*.c' | sed 's|^\./||')
 OBJS := $(addprefix $(BUILD_DIR)/, $(CFILES:.c=.c.o))
 
-.PHONY: all clean reset run
-
 all: $(TARGET)
 
 $(TARGET): $(OBJS)
-	$(CC) -lpthread -lncurses $(OBJS) -o $@
+	$(CC) -lpthread -lncurses `sdl2-config --libs` $(OBJS) -o $@
 
 $(BUILD_DIR)/%.c.o: %.c
 	@mkdir -p "$(dir $@)"
@@ -31,4 +30,6 @@ clean:
 	@clear
 	rm -rf $(BUILD_DIR)
 
-reset: clean all run
+reset: clean all
+
+.PHONY: all clean reset run

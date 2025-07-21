@@ -2,9 +2,9 @@
 #include <cpu.h>
 #include <defer.h>
 #include <interrupt.h>
+#include <ncurses.h>
 #include <paging.h>
 #include <queue.h>
-#include <ncurses.h>
 
 void irc_init(struct irc *irc, struct core *core) {
 	irc->core = core;
@@ -12,7 +12,6 @@ void irc_init(struct irc *irc, struct core *core) {
 	irc->in_exception = irc->in_double_fault = false;
 	queue_init(&irc->masked_queue);
 }
-
 
 bool irc_raise_interrupt(struct irc *irc, uint16_t vector) {
 	assert(vector != 0);
@@ -48,15 +47,16 @@ push:
 	const uint64_t ppr = irc->core->registers[PPR];
 
 	uint64_t stack = irc->core->registers[SP0];
+	stack -= 8;
 	vwrite64(irc->core, stack, pc);
-	stack += 8;
+	stack -= 8;
 	vwrite64(irc->core, stack, imr);
-	stack += 8;
+	stack -= 8;
 	vwrite64(irc->core, stack, ppr);
 	irc->core->registers[SP0] = stack;
 
 	const uintptr_t itr = irc->core->registers[ITR];
-	const uintptr_t handler_vaddr = itr + vector * sizeof (uintptr_t);
+	const uintptr_t handler_vaddr = itr + vector * sizeof(uintptr_t);
 	irc->core->registers[PC] = vread64(irc->core, handler_vaddr);
 
 	irc->core->registers[IMR] = ~0b111;
@@ -78,10 +78,11 @@ void irc_raise_double_fault(struct irc *irc) {
 	const uint64_t ppr = irc->core->registers[PPR];
 
 	uint64_t stack = irc->core->registers[SP0];
+	stack -= 8;
 	vwrite64(irc->core, stack, pc);
-	stack += 8;
+	stack -= 8;
 	vwrite64(irc->core, stack, imr);
-	stack += 8;
+	stack -= 8;
 	vwrite64(irc->core, stack, ppr);
 	irc->core->registers[SP0] = stack;
 

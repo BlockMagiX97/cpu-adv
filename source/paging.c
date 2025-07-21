@@ -9,9 +9,8 @@ struct ram *init_memory(uintptr_t precomit) {
 	if (mem == nullptr)
 		return nullptr;
 
-	mem->mem =
-		malloc(precomit * sizeof *mem->mem);
-		// mmap(nullptr, precomit, PROT_READ | PROT_WRITE, MAP_ANONYMOUS, -1, 0);
+	mem->mem = malloc(precomit * sizeof *mem->mem);
+	// mmap(nullptr, precomit, PROT_READ | PROT_WRITE, MAP_ANONYMOUS, -1, 0);
 
 	if (mem->mem == nullptr) {
 		free(mem);
@@ -26,8 +25,9 @@ uintptr_t vaddr_to_phys(struct core *c, uintptr_t vaddr) {
 	if (entry->present == 0) {                                                 \
 		return 0;                                                              \
 	}
-	
-	if (c->registers[PPTR] == 0) return vaddr;
+
+	if (c->registers[PPTR] == 0)
+		return vaddr;
 
 	const uintptr_t l1_index = vaddr >> 51;
 	const uintptr_t l2_index = (vaddr >> 38) & 0b1111111111111;
@@ -70,7 +70,8 @@ uintptr_t vaddr_to_phys_u(struct core *c, uintptr_t vaddr, bool write) {
 		return 0;                                                              \
 	}
 
-	if (c->registers[PPTR] == 0) return vaddr;
+	if (c->registers[PPTR] == 0)
+		return vaddr;
 
 	const uintptr_t l1_index = vaddr >> 51;
 	const uintptr_t l2_index = (vaddr >> 38) & 0b1111111111111;

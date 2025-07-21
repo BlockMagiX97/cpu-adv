@@ -4,6 +4,8 @@
 #include <paging.h>
 #include <string.h>
 
+// TODO instructions that can't be ran in usermode
+
 static inline uint64_t get_sp(struct core *c) {
 	return c->registers[c->registers[PPR] == 0 ? SP1 : SP0];
 }
@@ -64,7 +66,7 @@ static bool cond_ok(struct core *c, enum cmove_argument_mode cond) {
 void cpu_init(struct core *c, struct ram *mem) {
 	memset(c, 0, sizeof(*c));
 	c->mem = mem;
-    c->irc = malloc(sizeof *c->irc);
+	c->irc = malloc(sizeof *c->irc);
 	irc_init(c->irc, c);
 	c->registers[SP1] = mem->cap;
 	c->registers[SP0] = mem->cap - 0x1000;
@@ -114,7 +116,7 @@ bool cpu_step(struct core *c) {
 		if ((inst.type == RR &&
 			 c->registers[inst.register_register.reg2] == 0)) {
 			irc_raise_interrupt(c->irc, ICR_DIV_BY_ZERO);
-			return false;
+			return true;
 		}
 		if (inst.type == RR) {
 			r1 = inst.register_register.reg1;
@@ -156,7 +158,7 @@ bool cpu_step(struct core *c) {
 		case DIV:
 			if (inst.type == RI && b == 0) {
 				irc_raise_interrupt(c->irc, ICR_DIV_BY_ZERO);
-				return false;
+				return true;
 			}
 			c->registers[r1] = a / b;
 			c->registers[FR] &= ~(FLAG_CF | FLAG_OF | FLAG_ZF | FLAG_SF);
@@ -174,7 +176,7 @@ bool cpu_step(struct core *c) {
 		if ((inst.type != RR && inst.type != RI) ||
 			(is_not && inst.type != RR && inst.type != RI)) {
 			irc_raise_interrupt(c->irc, ICR_INVALID_OPCODE);
-			return false;
+			return true;
 		}
 		if (inst.type == RR) {
 			r1 = inst.register_register.reg1;
@@ -216,7 +218,7 @@ bool cpu_step(struct core *c) {
 			vwrite64(c, sp, inst.one_arg.imm64);
 		} else {
 			irc_raise_interrupt(c->irc, ICR_INVALID_OPCODE);
-			return false;
+			return true;
 		}
 		break;
 
@@ -228,7 +230,7 @@ bool cpu_step(struct core *c) {
 			c->registers[inst.one_arg.reg] = res;
 		} else {
 			irc_raise_interrupt(c->irc, ICR_INVALID_OPCODE);
-			return false;
+			return true;
 		}
 		break;
 
@@ -242,11 +244,11 @@ bool cpu_step(struct core *c) {
 		} else if (inst.one_arg.mode == IMM) {
 			c->registers[PC] = inst.one_arg.imm64;
 		} else if (inst.one_arg.mode == ADDRESS) {
-            uint64_t j2 = vread64(c, inst.one_arg.address);
-            c->registers[PC] = j2;
+			uint64_t j2 = vread64(c, inst.one_arg.address);
+			c->registers[PC] = j2;
 		} else {
 			irc_raise_interrupt(c->irc, ICR_INVALID_OPCODE);
-			return false;
+			return true;
 		}
 		return true;
 
@@ -259,7 +261,7 @@ bool cpu_step(struct core *c) {
 	case CMP: {
 		if (inst.type != RR && inst.type != RI) {
 			irc_raise_interrupt(c->irc, ICR_INVALID_OPCODE);
-			return false;
+			return true;
 		}
 		if (inst.type == RR) {
 			a = c->registers[inst.register_register.reg1];
@@ -323,7 +325,7 @@ bool cpu_step(struct core *c) {
 
 	default:
 		irc_raise_interrupt(c->irc, ICR_INVALID_OPCODE);
-		return false;
+		return true;
 	}
 
 	return true;
