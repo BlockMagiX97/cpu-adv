@@ -308,6 +308,7 @@ bool cpu_step(struct core *c) {
 		c->registers[PC] = vread64(c, sp);
 		sp += 8;
 		set_sp(c, sp);
+		c->irc->in_exception = false;
 		return true;
 
 	case HLT:

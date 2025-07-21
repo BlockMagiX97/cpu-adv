@@ -1,1 +1,1 @@
--> RETI must clear core->irc->in_exception unconditionally
+[x] RETI must clear core->irc->in_exception unconditionally 
