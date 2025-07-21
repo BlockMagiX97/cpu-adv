@@ -75,6 +75,7 @@ bool cpu_step(struct core *c) {
 	uint64_t old_pc = c->registers[PC];
 	struct instruction inst;
 	uint64_t next_pc = parse_instruction(c, &inst, old_pc);
+	c->registers[PC] = next_pc;
 
 	uint64_t a, b, res, sp, addr;
 	uint8_t r1, r2;
@@ -110,10 +111,9 @@ bool cpu_step(struct core *c) {
 			inst.register_register.reg2 != 0) {
 			/* fall through */
 		}
-		if ((inst.type != RR && inst.type != RI) ||
-			(inst.opcode == DIV && inst.type == RR &&
-			 inst.register_register.reg2 == 0)) {
-			irc_raise_interrupt(c->irc, ICR_INVALID_OPCODE);
+		if ((inst.type == RR &&
+			 c->registers[inst.register_register.reg2] == 0)) {
+			irc_raise_interrupt(c->irc, ICR_DIV_BY_ZERO);
 			return false;
 		}
 		if (inst.type == RR) {
@@ -309,6 +309,7 @@ bool cpu_step(struct core *c) {
 		return true;
 
 	case HLT:
+		c->registers[PC] = old_pc;
 		return false;
 
 	case COANDSW:
@@ -325,6 +326,5 @@ bool cpu_step(struct core *c) {
 		return false;
 	}
 
-	c->registers[PC] = next_pc;
 	return true;
 }

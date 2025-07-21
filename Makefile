@@ -18,7 +18,7 @@ OBJS := $(addprefix $(BUILD_DIR)/, $(CFILES:.c=.c.o))
 all: $(TARGET)
 
 $(TARGET): $(OBJS)
-	$(CC) -lpthread $(OBJS) -o $@
+	$(CC) -lpthread -lncurses $(OBJS) -o $@
 
 $(BUILD_DIR)/%.c.o: %.c
 	@mkdir -p "$(dir $@)"

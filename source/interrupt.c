@@ -4,40 +4,34 @@
 #include <interrupt.h>
 #include <paging.h>
 #include <queue.h>
+#include <ncurses.h>
 
 void irc_init(struct irc *irc, struct core *core) {
 	irc->core = core;
 	irc->irc_to_isr = 10;
-	irc->it =
-		(struct interrupt_table *)vaddr_to_ptr(irc->core, core->registers[ITR]);
 	irc->in_exception = irc->in_double_fault = false;
 	queue_init(&irc->masked_queue);
 }
 
-void update_it_cache(struct irc *irc) {
-	irc->it = (struct interrupt_table *)vaddr_to_ptr(irc->core,
-													 irc->core->registers[ITR]);
-}
 
 bool irc_raise_interrupt(struct irc *irc, uint16_t vector) {
-	assert(irc->irc_to_isr + vector != 0);
-	const uint16_t vec = irc->irc_to_isr + vector - 1;
-	const uint64_t bitmask = irc->core->registers[IMR];
+	assert(vector != 0);
+	const uint16_t vec_mask = vector - 1;
 	bool raise_double_fault = false;
 
 	if (irc->in_double_fault) {
 		// triple fault; reset CPU TODO
 	}
 
-	if (vec <= 3) {
+	if (vector <= 3) {
 		if (irc->in_exception)
 			raise_double_fault = true;
 	} else
 		irc->in_exception = true;
 
-	const uint64_t mask = (1ULL << vec);
-	if ((mask & bitmask) != 0) {
-		if (vec <= 3) {
+	const uint64_t mask = (1ULL << vec_mask);
+	if ((mask & irc->core->registers[IMR]) != 0) {
+		if (vector <= 3) {
 			raise_double_fault = true;
 			goto push;
 		}
@@ -61,7 +55,10 @@ push:
 	vwrite64(irc->core, stack, ppr);
 	irc->core->registers[SP0] = stack;
 
-	irc->core->registers[PC] = irc->it->handler[vec + 1];
+	const uintptr_t itr = irc->core->registers[ITR];
+	const uintptr_t handler_vaddr = itr + vector * sizeof (uintptr_t);
+	irc->core->registers[PC] = vread64(irc->core, handler_vaddr);
+
 	irc->core->registers[IMR] = ~0b111;
 	irc->core->registers[PPR] = 0;
 
@@ -88,7 +85,8 @@ void irc_raise_double_fault(struct irc *irc) {
 	vwrite64(irc->core, stack, ppr);
 	irc->core->registers[SP0] = stack;
 
-	irc->core->registers[PC] = irc->it->handler[0];
+	const uintptr_t itr_handler_0 = irc->core->registers[ITR];
+	irc->core->registers[PC] = vread64(irc->core, itr_handler_0);
 	irc->core->registers[IMR] = ~0b111;
 	irc->core->registers[PPR] = 0;
 }
@@ -100,7 +98,7 @@ bool irc_on_imr_write(struct irc *irc) {
 	while (!queue_is_empty(&irc->masked_queue)) {
 		struct interrupt_event e = queue_pop(&irc->masked_queue);
 
-		uint16_t vec = irc->irc_to_isr + e.irc - 1;
+		uint16_t vec = e.irc - 1;
 		if (!(new_imr & (1ULL << vec))) {
 			irc_raise_interrupt(irc, e.irc);
 			raised_any = true;

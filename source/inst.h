@@ -60,7 +60,7 @@ struct instruction {
 			enum registers_id reg1;
 			enum registers_id reg2;
 		} register_register;
-
+		
 		struct {
 			enum registers_id reg1;
 			uint64_t address;
@@ -91,6 +91,9 @@ struct instruction {
 int is_valid_reg(uint8_t r);
 
 uint64_t parse_instruction(struct core *c, struct instruction *inst,
+						   uint64_t old_pc);
+
+uint64_t parse_instruction_ro(struct core *c, struct instruction *inst,
 						   uint64_t old_pc);
 
 #endif // INST_H
