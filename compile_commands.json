@@ -1,0 +1,59 @@
+[
+  {
+    "arguments": [
+      "/sbin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-std=c23",
+      "-Isource",
+      "-include",
+      "const.h",
+      "-c",
+      "-o",
+      "/home/yeint/code/cpu/build/source/main.c.o",
+      "source/main.c"
+    ],
+    "directory": "/home/yeint/code/cpu",
+    "file": "/home/yeint/code/cpu/source/main.c",
+    "output": "/home/yeint/code/cpu/build/source/main.c.o"
+  },
+  {
+    "arguments": [
+      "/sbin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-std=c23",
+      "-Isource",
+      "-include",
+      "const.h",
+      "-c",
+      "-o",
+      "/home/yeint/code/cpu/build/source/interrupt.c.o",
+      "source/interrupt.c"
+    ],
+    "directory": "/home/yeint/code/cpu",
+    "file": "/home/yeint/code/cpu/source/interrupt.c",
+    "output": "/home/yeint/code/cpu/build/source/interrupt.c.o"
+  },
+  {
+    "arguments": [
+      "/sbin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-std=c23",
+      "-Isource",
+      "-include",
+      "const.h",
+      "-c",
+      "-o",
+      "/home/yeint/code/cpu/build/source/paging.c.o",
+      "source/paging.c"
+    ],
+    "directory": "/home/yeint/code/cpu",
+    "file": "/home/yeint/code/cpu/source/paging.c",
+    "output": "/home/yeint/code/cpu/build/source/paging.c.o"
+  }
+]

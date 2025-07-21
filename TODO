@@ -1,0 +1,1 @@
+-> RETI must clear core->irc->in_exception unconditionally
