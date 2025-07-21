@@ -47,6 +47,13 @@ enum registers_id : uint8_t {
 	PPR,
 };
 
+#define FLAG_CF  (1ULL<<0)
+#define FLAG_ZF  (1ULL<<1)
+#define FLAG_SF  (1ULL<<2)
+#define FLAG_OF  (1ULL<<3)
+#define FLAG_LF  (1ULL<<4)
+#define FLAG_GF  (1ULL<<5)
+
 struct irc;
 
 struct core {
@@ -55,5 +62,10 @@ struct core {
 	struct ram* mem;
 	// optional TODO tlb
 };
+
+void cpu_init(struct core *c,
+              struct ram *mem);
+
+bool cpu_step(struct core *c);
 
 #endif // CPU_H

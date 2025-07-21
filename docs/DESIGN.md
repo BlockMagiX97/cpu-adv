@@ -73,7 +73,7 @@ XOR => RR, RI
 PUSH => OA(r), OA(i)
 POP => OA(r)
 
-CALL => RR, RI
+CALL => OA(r), OA(i) (<= OA(i) is for anything, addresses and labels)
 CMP => RR, RI
 CMOV => RR, RI (3 functions that operate on flags register((e)quals, (l)ess, (g)reater (n)ot-equals) -> (le) (ge))
 

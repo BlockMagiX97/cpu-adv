@@ -1,3 +1,4 @@
 cpu
 .cache
 build
+*.bin

@@ -9,6 +9,7 @@
       "-Isource",
       "-include",
       "const.h",
+      "-flto",
       "-c",
       "-o",
       "/home/yeint/code/cpu/build/source/main.c.o",
@@ -28,6 +29,7 @@
       "-Isource",
       "-include",
       "const.h",
+      "-flto",
       "-c",
       "-o",
       "/home/yeint/code/cpu/build/source/interrupt.c.o",
@@ -47,6 +49,27 @@
       "-Isource",
       "-include",
       "const.h",
+      "-flto",
+      "-c",
+      "-o",
+      "/home/yeint/code/cpu/build/source/cpu.c.o",
+      "source/cpu.c"
+    ],
+    "directory": "/home/yeint/code/cpu",
+    "file": "/home/yeint/code/cpu/source/cpu.c",
+    "output": "/home/yeint/code/cpu/build/source/cpu.c.o"
+  },
+  {
+    "arguments": [
+      "/sbin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-std=c23",
+      "-Isource",
+      "-include",
+      "const.h",
+      "-flto",
       "-c",
       "-o",
       "/home/yeint/code/cpu/build/source/paging.c.o",
@@ -55,5 +78,25 @@
     "directory": "/home/yeint/code/cpu",
     "file": "/home/yeint/code/cpu/source/paging.c",
     "output": "/home/yeint/code/cpu/build/source/paging.c.o"
+  },
+  {
+    "arguments": [
+      "/sbin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-std=c23",
+      "-Isource",
+      "-include",
+      "const.h",
+      "-flto",
+      "-c",
+      "-o",
+      "/home/yeint/code/cpu/build/source/inst.c.o",
+      "source/inst.c"
+    ],
+    "directory": "/home/yeint/code/cpu",
+    "file": "/home/yeint/code/cpu/source/inst.c",
+    "output": "/home/yeint/code/cpu/build/source/inst.c.o"
   }
 ]

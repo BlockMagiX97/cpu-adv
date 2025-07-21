@@ -1,5 +1,5 @@
 CC := cc
-CFLAGS := -Wall -Wextra -Werror -std=c23 -Isource -include const.h
+CFLAGS := -Wall -Wextra -Werror -std=c23 -Isource -include const.h -g -O0
 
 CLANG_DETECTED := $(shell echo | $(CC) -dM -E -x c - | grep -q '__clang__' && echo 1 || echo 0)
 

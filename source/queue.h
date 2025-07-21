@@ -45,7 +45,7 @@
 			ret = &(queue)->elements[++(queue)->front];                        \
 			(queue)->size--;                                                   \
 		}                                                                      \
-		ret;                                                                   \
+		*ret;                                                                  \
 	})
 
 #define queue_peak(queue)                                                      \

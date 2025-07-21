@@ -2,7 +2,7 @@
 #include <interrupt.h>
 #include <paging.h>
 
-#define is_valid_reg(r) (r <= PPR)
+#define is_valid_reg(r) ((r) <= PPR)
 
 uint64_t parse_instruction(struct core *c, struct instruction *inst,
 						   uint64_t old_pc) {
@@ -13,22 +13,35 @@ uint64_t parse_instruction(struct core *c, struct instruction *inst,
 
 	switch (inst->type) {
 	case NO:
-		if (inst->opcode != RET && inst->opcode != RETI &&
-			inst->opcode != SYSRET && inst->opcode != SYSCALL &&
-			inst->opcode != HLT) {
+		switch (inst->opcode) {
+		case RET:
+		case RETI:
+		case SYSRET:
+		case SYSCALL:
+		case HLT:
+			return new_pc;
+		default:
 			irc_raise_interrupt(c->irc, ICR_INVALID_OPCODE);
 			return 0;
 		}
-		return new_pc;
 
 	case OA:
-		if (inst->opcode != PUSH && inst->opcode != POP) {
+		switch (inst->opcode) {
+		case PUSH:
+		case POP:
+		case CALL:
+			break;
+		default:
 			irc_raise_interrupt(c->irc, ICR_INVALID_OPCODE);
 			return 0;
 		}
 		inst->one_arg.mode = vread8(c, new_pc++);
 		if (inst->one_arg.mode == REGISTER) {
 			inst->one_arg.reg = vread8(c, new_pc++);
+			if (!is_valid_reg(inst->one_arg.reg)) {
+				irc_raise_interrupt(c->irc, ICR_INVALID_OPCODE);
+				return 0;
+			}
 		} else if (inst->one_arg.mode == ADDRESS) {
 			inst->one_arg.address = vread64(c, new_pc);
 			new_pc += 8;
@@ -42,6 +55,22 @@ uint64_t parse_instruction(struct core *c, struct instruction *inst,
 		return new_pc;
 
 	case RR: {
+		switch (inst->opcode) {
+		case MOV:
+		case ADD:
+		case SUB:
+		case MUL:
+		case DIV:
+		case OR:
+		case AND:
+		case NOT:
+		case XOR:
+		case CMP:
+			break;
+		default:
+			irc_raise_interrupt(c->irc, ICR_INVALID_OPCODE);
+			return 0;
+		}
 		uint8_t r1 = vread8(c, new_pc++);
 		uint8_t r2 = vread8(c, new_pc++);
 		if (!is_valid_reg(r1) || !is_valid_reg(r2)) {
@@ -54,6 +83,14 @@ uint64_t parse_instruction(struct core *c, struct instruction *inst,
 	}
 
 	case RM: {
+		switch (inst->opcode) {
+		case MOV:
+		case COANDSW:
+			break;
+		default:
+			irc_raise_interrupt(c->irc, ICR_INVALID_OPCODE);
+			return 0;
+		}
 		uint8_t r = vread8(c, new_pc++);
 		if (!is_valid_reg(r)) {
 			irc_raise_interrupt(c->irc, ICR_INVALID_OPCODE);
@@ -66,6 +103,22 @@ uint64_t parse_instruction(struct core *c, struct instruction *inst,
 	}
 
 	case RI: {
+		switch (inst->opcode) {
+		case MOV:
+		case ADD:
+		case SUB:
+		case MUL:
+		case DIV:
+		case OR:
+		case AND:
+		case NOT:
+		case XOR:
+		case CMP:
+			break;
+		default:
+			irc_raise_interrupt(c->irc, ICR_INVALID_OPCODE);
+			return 0;
+		}
 		uint8_t r = vread8(c, new_pc++);
 		if (!is_valid_reg(r)) {
 			irc_raise_interrupt(c->irc, ICR_INVALID_OPCODE);

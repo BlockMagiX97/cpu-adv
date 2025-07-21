@@ -10,7 +10,8 @@ struct ram *init_memory(uintptr_t precomit) {
 		return nullptr;
 
 	mem->mem =
-		mmap(nullptr, precomit, PROT_READ | PROT_WRITE, MAP_ANONYMOUS, -1, 0);
+		malloc(precomit * sizeof *mem->mem);
+		// mmap(nullptr, precomit, PROT_READ | PROT_WRITE, MAP_ANONYMOUS, -1, 0);
 
 	if (mem->mem == nullptr) {
 		free(mem);
@@ -25,6 +26,8 @@ uintptr_t vaddr_to_phys(struct core *c, uintptr_t vaddr) {
 	if (entry->present == 0) {                                                 \
 		return 0;                                                              \
 	}
+	
+	if (c->registers[PPTR] == 0) return vaddr;
 
 	const uintptr_t l1_index = vaddr >> 51;
 	const uintptr_t l2_index = (vaddr >> 38) & 0b1111111111111;
@@ -67,6 +70,8 @@ uintptr_t vaddr_to_phys_u(struct core *c, uintptr_t vaddr, bool write) {
 		return 0;                                                              \
 	}
 
+	if (c->registers[PPTR] == 0) return vaddr;
+
 	const uintptr_t l1_index = vaddr >> 51;
 	const uintptr_t l2_index = (vaddr >> 38) & 0b1111111111111;
 	const uintptr_t l3_index = (vaddr >> 25) & 0b1111111111111;
@@ -76,7 +81,7 @@ uintptr_t vaddr_to_phys_u(struct core *c, uintptr_t vaddr, bool write) {
 	struct page_table *page_table;
 	struct page_table_entry *entry;
 
-	bool supervisor = c->registers[PPR];
+	bool supervisor = c->registers[PPR] == 0;
 
 	page_table = (struct page_table *)c->mem->mem + c->registers[PPTR];
 	entry = &page_table->entries[l1_index];

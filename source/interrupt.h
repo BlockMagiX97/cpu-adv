@@ -28,6 +28,7 @@ struct irc {
 };
 
 void irc_init(struct irc *irc, struct core *core);
+void update_it_cache(struct irc *irc);
 bool irc_raise_interrupt(struct irc *irc, uint16_t vector);
 void irc_raise_double_fault(struct irc *irc);
 bool irc_on_imr_write(struct irc *irc);

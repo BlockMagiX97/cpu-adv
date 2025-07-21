@@ -14,6 +14,11 @@ void irc_init(struct irc *irc, struct core *core) {
 	queue_init(&irc->masked_queue);
 }
 
+void update_it_cache(struct irc *irc) {
+	irc->it = (struct interrupt_table *)vaddr_to_ptr(irc->core,
+													 irc->core->registers[ITR]);
+}
+
 bool irc_raise_interrupt(struct irc *irc, uint16_t vector) {
 	assert(irc->irc_to_isr + vector != 0);
 	const uint16_t vec = irc->irc_to_isr + vector - 1;
@@ -58,7 +63,7 @@ push:
 
 	irc->core->registers[PC] = irc->it->handler[vec + 1];
 	irc->core->registers[IMR] = ~0b111;
-	irc->core->registers[PPR] = 1;
+	irc->core->registers[PPR] = 0;
 
 	if (raise_double_fault) {
 		irc_raise_double_fault(irc);
@@ -85,23 +90,25 @@ void irc_raise_double_fault(struct irc *irc) {
 
 	irc->core->registers[PC] = irc->it->handler[0];
 	irc->core->registers[IMR] = ~0b111;
-	irc->core->registers[PPR] = 1;
+	irc->core->registers[PPR] = 0;
 }
 
 bool irc_on_imr_write(struct irc *irc) {
-	const uint64_t vecs[4] = {
-		1 << (irc->irc_to_isr), 1 << (irc->irc_to_isr + 1),
-		1 << (irc->irc_to_isr + 2), 1 << (irc->irc_to_isr + 3)};
+	const uint64_t new_imr = irc->core->registers[IMR];
+	bool raised_any = false;
 
-	bool raised_interrupt = false;
-	for (size_t i = 0; i < sizeof vecs; i++)
-		if ((vecs[i] & irc->core->registers[IMR]) != 1) {
-			while (!queue_is_empty(&irc->masked_queue)) {
-				struct interrupt_event *e = queue_pop(&irc->masked_queue);
-				irc_raise_interrupt(irc, e->irc);
-				raised_interrupt = true;
-			}
+	while (!queue_is_empty(&irc->masked_queue)) {
+		struct interrupt_event e = queue_pop(&irc->masked_queue);
+
+		uint16_t vec = irc->irc_to_isr + e.irc - 1;
+		if (!(new_imr & (1ULL << vec))) {
+			irc_raise_interrupt(irc, e.irc);
+			raised_any = true;
+		} else {
+			queue_push(&irc->masked_queue, e);
+			break;
 		}
+	}
 
-	return raised_interrupt;
+	return raised_any;
 }
