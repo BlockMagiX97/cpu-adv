@@ -1,6 +1,7 @@
 #ifndef PAGEING_H
 #define PAGEING_H
 
+#include <mmio.h>
 #include <stdint.h>
 #include <string.h>
 
@@ -25,6 +26,7 @@ struct ram {
 };
 
 struct ram *init_memory(uintptr_t precomit);
+/* sets err to PAGE_FAULT on interrupt */
 uintptr_t vaddr_to_phys(struct core *c, uintptr_t vaddr);
 uintptr_t vaddr_to_phys_u(struct core *c, uintptr_t vaddr, bool write);
 
@@ -45,12 +47,18 @@ uintptr_t vaddr_to_phys_u(struct core *c, uintptr_t vaddr, bool write);
 #define __PAGE_GENERATE_FUNCTION_DEFINITIONS(size)                             \
 	uint##size##_t vread##size(struct core *c, uintptr_t vaddr) {              \
 		uint##size##_t ret;                                                    \
-		memcpy(&ret, c->mem->mem + vaddr_to_phys(c, vaddr), sizeof(ret));      \
+		uintptr_t paddr = vaddr_to_phys(c, vaddr);                             \
+		if (handle_mmio_read(c, paddr, &ret, sizeof(ret)))                     \
+			return ret;                                                        \
+		memcpy(&ret, c->mem->mem + paddr, sizeof(ret));                        \
 		return ret;                                                            \
 	}                                                                          \
                                                                                \
 	bool vwrite##size(struct core *c, uintptr_t vaddr, uint##size##_t val) {   \
-		memcpy(c->mem->mem + vaddr_to_phys(c, vaddr), &val, sizeof(val));      \
+		uintptr_t paddr = vaddr_to_phys(c, vaddr);                             \
+		if (handle_mmio_write(c, paddr, &val, sizeof(val)))                    \
+			return true;                                                       \
+		memcpy(c->mem->mem + paddr, &val, sizeof(val));                        \
 		return true;                                                           \
 	}                                                                          \
                                                                                \
@@ -59,6 +67,8 @@ uintptr_t vaddr_to_phys_u(struct core *c, uintptr_t vaddr, bool write);
 		uintptr_t off = vaddr_to_phys_u(c, vaddr, false);                      \
 		if (off == 0)                                                          \
 			return 0;                                                          \
+		if (handle_mmio_read(c, off, &ret, sizeof(ret)))                       \
+			return ret;                                                        \
 		memcpy(&ret, c->mem->mem + off, sizeof(ret));                          \
 		return ret;                                                            \
 	}                                                                          \
@@ -68,6 +78,8 @@ uintptr_t vaddr_to_phys_u(struct core *c, uintptr_t vaddr, bool write);
 		uintptr_t off = vaddr_to_phys_u(c, vaddr, true);                       \
 		if (off == 0)                                                          \
 			return false;                                                      \
+		if (handle_mmio_write(c, off, &val, sizeof(val)))                      \
+			return true;                                                       \
 		memcpy(c->mem->mem + off, &val, sizeof(val));                          \
 		return true;                                                           \
 	}

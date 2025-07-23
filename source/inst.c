@@ -221,6 +221,7 @@ uint64_t parse_instruction_ro(struct core *c, struct instruction *inst,
 		case NOT:
 		case XOR:
 		case CMP:
+		case STR:
 			break;
 		default:
 			return 0;
@@ -265,6 +266,7 @@ uint64_t parse_instruction_ro(struct core *c, struct instruction *inst,
 		case NOT:
 		case XOR:
 		case CMP:
+		case STR:
 			break;
 		default:
 			return 0;

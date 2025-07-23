@@ -1,3 +1,5 @@
+#include <SDL2/SDL.h>
+#include <fcntl.h>
 #include <inttypes.h>
 #include <ncurses.h>
 #include <stdint.h>
@@ -7,6 +9,7 @@
 #include <unistd.h>
 
 #include <cpu.h>
+#include <graphics.h>
 #include <inst.h>
 #include <interrupt.h>
 #include <paging.h>
@@ -88,6 +91,7 @@ int main(int argc, char **argv) {
 	cpu.registers[PPTR] = 0;
 	cpu.registers[IMR] = 0;
 	cpu.registers[ITR] = 0;
+	graphics_init(&cpu);
 
 	initscr();
 	noecho();
@@ -110,69 +114,109 @@ int main(int argc, char **argv) {
 	WINDOW *w_stack = newwin(top_h, right_w, 0, col_w * 3);
 	WINDOW *w_page = newwin(bot_h, right_w, top_h, col_w * 3);
 
-	bool paused = false, halted = false;
+	bool paused = false;
+	bool halted = false;
+	bool show_sp0 = false;
+	SDL_Event ev;
+
 	while (!halted) {
 		int ch = getch();
 		if (ch == 'q')
 			break;
 		if (ch == 'p')
 			paused = !paused;
+		if (ch == 't')
+			show_sp0 = !show_sp0;
 
-		if (!paused && !cpu_step(&cpu)) {
+		if (!paused && !cpu_step(&cpu))
 			halted = true;
+
+		if (graphics_step(&ev)) {
 		}
 
 		werase(w_inst);
 		box(w_inst, 0, 0);
 		mvwprintw(w_inst, 0, 2, " Disassembly ");
-		int rows = H - 2;
-		uint64_t pc = cpu.registers[PC];
-		uint64_t addr = pc;
-		struct instruction inst;
-		for (int i = 0; i < rows; i++) {
-			uint64_t cur = addr;
-			uint64_t next = parse_instruction_ro(&cpu, &inst, addr);
+		{
+			int rows = H - 2;
+			uint64_t pc = cpu.registers[PC];
+			uint64_t addr = pc;
+			struct instruction inst;
 			char linebuf[128];
 
-			if (next == 0) {
-				uint8_t b = vread8(&cpu, addr);
-				snprintf(linebuf, sizeof linebuf,
-						 "%016" PRIx64 ": [0x%02" PRIx8 "]", cur, b);
-				next = addr + 1;
-			} else {
-				format_inst(&inst, cur, linebuf, sizeof linebuf);
+			for (int i = 0; i < rows; i++) {
+				uint64_t cur = addr;
+				uint64_t next = parse_instruction_ro(&cpu, &inst, addr);
+
+				if (next == 0) {
+					uint8_t b = vread8(&cpu, addr);
+					snprintf(linebuf, sizeof linebuf,
+							 "%016" PRIx64 ": [0x%02" PRIx8 "]", cur, b);
+					next = addr + 1;
+				} else {
+					format_inst(&inst, cur, linebuf, sizeof linebuf);
+				}
+
+				if (cur == pc)
+					wattron(w_inst, A_REVERSE);
+				mvwprintw(w_inst, 1 + i, 1, "%.*s", col_w - 2, linebuf);
+				if (cur == pc)
+					wattroff(w_inst, A_REVERSE);
+
+				addr = next;
 			}
-
-			if (cur == pc)
-				wattron(w_inst, A_REVERSE);
-			mvwprintw(w_inst, 1 + i, 1, "%.*s", col_w - 2, linebuf);
-			if (cur == pc)
-				wattroff(w_inst, A_REVERSE);
-
-			addr = next;
 		}
 		wrefresh(w_inst);
 
 		werase(w_regs);
 		box(w_regs, 0, 0);
 		mvwprintw(w_regs, 0, 2, " Registers ");
-		int rw = col_w - 2;
-		int cols = rw / 20;
-		if (cols < 1)
-			cols = 1;
-		int per = (41 + cols - 1) / cols;
-		for (int c = 0; c < cols; c++) {
-			for (int r = 0; r < per; r++) {
-				int idx = c * per + r;
-				if (idx >= 41)
+
+		{
+			int win_w = col_w - 2;
+			int win_h = H - 2;
+
+			int min_w = 0;
+			for (int i = 0; i < 41; i++) {
+				char tmp[64];
+				int len = snprintf(tmp, sizeof tmp, "%s:%016" PRIx64,
+								   reg_names[i], 0UL);
+				if (len > min_w)
+					min_w = len;
+			}
+			if (min_w > win_w)
+				min_w = win_w;
+
+			int max_cols = win_w / min_w;
+			if (max_cols < 1)
+				max_cols = 1;
+			int cols = 1;
+			for (int c = max_cols; c >= 1; c--) {
+				int rows_needed = (41 + c - 1) / c;
+				if (rows_needed <= win_h) {
+					cols = c;
 					break;
-				uint64_t v = cpu.registers[idx];
-				int y = 1 + r, x = 1 + c * 20;
-				if (idx == PC)
-					wattron(w_regs, A_BOLD);
-				mvwprintw(w_regs, y, x, "%-4s:%016" PRIx64, reg_names[idx], v);
-				if (idx == PC)
-					wattroff(w_regs, A_BOLD);
+				}
+			}
+
+			int col_wd = win_w / cols;
+			int per = (41 + cols - 1) / cols;
+
+			for (int c = 0; c < cols; c++) {
+				for (int r = 0; r < per; r++) {
+					int idx = c * per + r;
+					if (idx >= 41)
+						break;
+					uint64_t v = cpu.registers[idx];
+					int y = 1 + r;
+					int x = 1 + c * col_wd;
+					if (idx == PC)
+						wattron(w_regs, A_BOLD);
+					mvwprintw(w_regs, y, x, "%-*s:%016" PRIx64, min_w - 1,
+							  reg_names[idx], v);
+					if (idx == PC)
+						wattroff(w_regs, A_BOLD);
+				}
 			}
 		}
 		wrefresh(w_regs);
@@ -180,48 +224,71 @@ int main(int argc, char **argv) {
 		werase(w_mem);
 		box(w_mem, 0, 0);
 		mvwprintw(w_mem, 0, 2, " Memory ");
-		int mbw = col_w - 10;
-		uint64_t bpr = mbw / 3;
-		if (bpr < 1)
-			bpr = 1;
-		int mrows = H - 2;
-		uint64_t m0 = pc > (bpr * 2) ? pc - bpr * 2 : 0;
-		for (int r = 0; r < mrows; r++) {
-			uint64_t a = m0 + r * bpr;
-			mvwprintw(w_mem, 1 + r, 1, "%016" PRIx64 ":", a);
-			for (uint64_t b = 0; b < bpr; b++) {
-				uintptr_t phys = vaddr_to_phys(&cpu, a + b);
-				uint8_t byte = cpu.mem->mem[phys];
-				mvwprintw(w_mem, 1 + r, 19 + b * 3, "%02" PRIx8, byte);
+		{
+			int mbw = col_w - 10;
+			uint64_t bpr = mbw / 3;
+			if (bpr < 1)
+				bpr = 1;
+			int mrows = H - 2;
+			uint64_t base = cpu.registers[PC] > (bpr * 2)
+								? cpu.registers[PC] - (bpr * 2)
+								: 0;
+			for (int r = 0; r < mrows; r++) {
+				uint64_t a = base + r * bpr;
+				mvwprintw(w_mem, 1 + r, 1, "%016" PRIx64 ":", a);
+				for (uint64_t b = 0; b < bpr; b++) {
+					uintptr_t phys = vaddr_to_phys(&cpu, a + b);
+					uint8_t byte = cpu.mem->mem[phys];
+					mvwprintw(w_mem, 1 + r, 19 + b * 3, "%02" PRIx8, byte);
+				}
 			}
 		}
 		wrefresh(w_mem);
 
 		werase(w_stack);
 		box(w_stack, 0, 0);
-		mvwprintw(w_stack, 0, 2, " Stack (SP1) ");
-		int srows = top_h - 2;
-		uint64_t sp = cpu.registers[SP1];
-		for (int i = 0; i < srows; i++) {
-			uint64_t a = sp + i * sizeof(uint64_t);
-			uint64_t v = vread64(&cpu, a);
-			mvwprintw(w_stack, 1 + i, 1, "%016" PRIx64 ":%016" PRIx64, a, v);
+
+		if (!show_sp0)
+			wattron(w_stack, A_REVERSE);
+		mvwprintw(w_stack, 0, 2, "SP1");
+		if (!show_sp0)
+			wattroff(w_stack, A_REVERSE);
+
+		if (show_sp0)
+			wattron(w_stack, A_REVERSE);
+		mvwprintw(w_stack, 0, 6, "SP0");
+		if (show_sp0)
+			wattroff(w_stack, A_REVERSE);
+
+		mvwprintw(w_stack, 0, (right_w / 2) - 2, "Stk");
+
+		{
+			int srows = top_h - 2;
+			uint64_t sp = cpu.registers[show_sp0 ? SP0 : SP1];
+			for (int i = 0; i < srows; i++) {
+				uint64_t a = sp + i * sizeof(uint64_t);
+				uint64_t v = vread64(&cpu, a);
+				mvwprintw(w_stack, 1 + i, 1, "%016" PRIx64 ":%016" PRIx64, a,
+						  v);
+			}
 		}
 		wrefresh(w_stack);
 
 		werase(w_page);
 		box(w_page, 0, 0);
-		mvwprintw(w_page, 0, 2, " Page Trans ");
-		int prow = bot_h - 2;
-		uint64_t base = pc & ~0xFFF;
-		for (int i = 0; i < prow; i++) {
-			uint64_t va = base + i * 0x1000;
-			uintptr_t pa = vaddr_to_phys_u(&cpu, va, false);
-			if (pa == 0)
-				mvwprintw(w_page, 1 + i, 1, "%016" PRIx64 " -> FAULT", va);
-			else
-				mvwprintw(w_page, 1 + i, 1, "%016" PRIx64 " -> %016" PRIxPTR,
-						  va, pa);
+		mvwprintw(w_page, 0, 2, "Page");
+		{
+			int prow = bot_h - 2;
+			uint64_t base = cpu.registers[PC] & ~0xFFF;
+			for (int i = 0; i < prow; i++) {
+				uint64_t va = base + i * 0x1000;
+				uintptr_t pa = vaddr_to_phys_u(&cpu, va, false);
+				if (pa == 0)
+					mvwprintw(w_page, 1 + i, 1, "%016" PRIx64 "-> FAULT", va);
+				else
+					mvwprintw(w_page, 1 + i, 1, "%016" PRIx64 "-> %016" PRIxPTR,
+							  va, pa);
+			}
 		}
 		wrefresh(w_page);
 

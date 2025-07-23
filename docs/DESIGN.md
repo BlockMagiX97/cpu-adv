@@ -32,8 +32,8 @@ Interrupt 3 -> Page Fault
 Interrupt 4 -> Protection Fault
 
 Interrupt Routing Chipset (IRC) Hardware Interrupt (timer, keyboard, disk etc) per core
-    IRC0 (interrupt 10) -> Timer tick
-    IRC1 (interrupt 11) -> Keyboard Event
+    IRC0 (interrupt 10) -> Timer tick => 0 + irc->irc_to_isr
+    IRC1 (interrupt 11) -> Keyboard Event => 1 + irc->irc_to_isr
     IRC2 (interrupt 12) -> Floppy disk event
     IRC3 (interrupt 13) -> Inter Processor Interrupt
 
@@ -92,6 +92,7 @@ COANDSW RN (register expected) ML (memory ptr)
         *ML = R0
     return orig
 ```
+STR => RR, RI (RI is inverse, stores the register into an IMM value, assemblers should inverse the operands)
 
 ```c
 enum registers_id : uint8_t {

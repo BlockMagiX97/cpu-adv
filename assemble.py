@@ -28,6 +28,7 @@ class Opcode(IntEnum):
     OR=5; AND=6; NOT=7; XOR=8; PUSH=9
     POP=10; CALL=11; CMP=12; CMOV=13; RET=14
     RETI=15; SYSRET=16; SYSCALL=17; HLT=18; COANDSW=19
+    STR=20
 
 
 class OneArgumentMode(IntEnum):
@@ -46,7 +47,7 @@ class Assembler:
     _reg       = re.compile(r'^(r[0-9]|r[12][0-9]|r3[01]|pc|sp0|sp1|fr|pptr|imr|itr|slr|ppr)$', re.IGNORECASE)
     _mem       = re.compile(r'^\[\s*([^\]]+?)\s*\]$')
     _split_op  = re.compile(r'\s*,\s*')
-    _int       = re.compile(r'^[0-9]+$|^0x[0-9A-Fa-f]+$')
+    _int       = re.compile(r'^[0-9][0-9_]*$|^0[xX][0-9A-Fa-f_]+$')
     _sym       = re.compile(r'^[A-Za-z_]\w*$')
 
     def __init__(self):
@@ -90,7 +91,7 @@ class Assembler:
     def first_pass(self):
         pc = 0
         for lineno, line in self.lines:
-            mo = re.match(r'^\s*\.org\s+(.+)$', line, re.IGNORECASE)
+            mo = re.match(r'^\s*\.?org\s+(.+)$', line, re.IGNORECASE)
             if mo:
                 addr = self._parse_imm(mo.group(1).strip(), lineno)
                 pc = addr
@@ -111,7 +112,7 @@ class Assembler:
         for lineno, line in self.lines:
             if self._label_def.match(line):
                 continue
-            if re.match(r'^\s*\.org\b', line, re.IGNORECASE):
+            if re.match(r'^\s*\.?org\s+(.+)$', line, re.IGNORECASE):
                 continue
             hdr, ops = self._encode_instr(line, lineno, dry_run=False)
             self.binary.extend(hdr)
@@ -129,7 +130,7 @@ class Assembler:
         return len(hdr) + len(ops)
 
     def _encode_instr(self, line: str, lineno: int, dry_run: bool) -> Tuple[bytes, bytes]:
-        mdir = re.match(r'^\s*(DB|DW|DD|DQ)\s+(.*)$', line, re.IGNORECASE)
+        mdir = re.match(r'^\s*\.?(DB|DW|DD|DQ)\s+(.*)$', line, re.IGNORECASE)
         if mdir:
             directive = mdir.group(1).lower()
             args = [o.strip() for o in self._split_op.split(mdir.group(2)) if o.strip()]
@@ -158,6 +159,13 @@ class Assembler:
             raise SyntaxError(f"Line {lineno}: unknown opcode `{op_name}`")
         opcode = Opcode[op_name]
         ops = [o.strip() for o in self._split_op.split(m.group(2) or '') if o.strip()]
+        if op_name == 'STR' and len(ops) == 2:
+            a, b = ops
+            is_a_imm = bool(self._int.match(a) or self._sym.match(a))
+            is_b_reg = bool(self._reg.match(b))
+            if is_a_imm and is_b_reg:
+                ops = [b, a]
+        
         otype = self._determine_type(op_name, ops, lineno)
 
         hdr = bytes([((otype.value & 0b111) << 5) | (opcode.value & 0b11111)])
@@ -176,6 +184,20 @@ class Assembler:
         if op in ('RET','RETI','SYSRET','SYSCALL','HLT'):
             if cnt: raise SyntaxError(f"Line {lineno}: `{op}` takes no operands")
             return OperandType.NO
+        
+        if op == 'STR':
+            if len(ops) != 2:
+                raise SyntaxError(f"Line {lineno}: STR needs 2 operands")
+            a, b = ops
+            a_reg = bool(self._reg.match(a))
+            b_reg = bool(self._reg.match(b))
+            b_imm = bool(self._int.match(b)) or bool(self._sym.match(b))
+            if a_reg and b_reg:
+                return OperandType.RR
+            if a_reg and b_imm:
+                return OperandType.RI
+
+            raise SyntaxError(f"Line {lineno}: invalid STR `{ops}`")
 
         if op == 'MOV':
             if cnt!=2: raise SyntaxError(f"Line {lineno}: MOV needs 2 operands")
@@ -314,7 +336,8 @@ class Assembler:
         if inner in self.labels:
             return self.labels[inner]
         if self._int.match(inner):
-            return int(inner,0)
+            inner_clean = inner.replace('_','')
+            return int(inner_clean,0)
         raise SyntaxError(f"Line {lineno}: unknown memory label/const `{inner}`")
 
     def _parse_imm(self, tok:str, lineno:int) -> int:
@@ -322,7 +345,8 @@ class Assembler:
             return self.labels[tok]
         if not self._int.match(tok):
             raise SyntaxError(f"Line {lineno}: expected immediate or label, got `{tok}`")
-        return int(tok,0)
+        tok_clean = tok.replace('_','')
+        return int(tok_clean, 0)
 
 
 def main():

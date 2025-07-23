@@ -33,7 +33,8 @@ enum opcode : uint8_t {
 	SYSRET = 16,
 	SYSCALL = 17,
 	HLT = 18,
-	COANDSW = 19
+	COANDSW = 19,
+	STR = 20,
 };
 
 enum one_argument_mode : uint8_t {

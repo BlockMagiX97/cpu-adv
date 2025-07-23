@@ -1,4 +1,5 @@
 #include <cpu.h>
+#include <err.h>
 #include <interrupt.h>
 #include <paging.h>
 #include <sys/mman.h>
@@ -23,6 +24,7 @@ struct ram *init_memory(uintptr_t precomit) {
 uintptr_t vaddr_to_phys(struct core *c, uintptr_t vaddr) {
 #define CHECK_PAGE                                                             \
 	if (entry->present == 0) {                                                 \
+		vm_error = VM_INT_PF;                                                  \
 		return 0;                                                              \
 	}
 
@@ -62,10 +64,12 @@ uintptr_t vaddr_to_phys(struct core *c, uintptr_t vaddr) {
 uintptr_t vaddr_to_phys_u(struct core *c, uintptr_t vaddr, bool write) {
 #define CHECK_PAGE                                                             \
 	if (entry->present == 0 || (entry->usermode == 0 && !supervisor)) {        \
+		vm_error = VM_INT_PF;                                                  \
 		irc_raise_interrupt(c->irc, ICR_PAGE_FAULT);                           \
 		return 0;                                                              \
 	}                                                                          \
 	if (!entry->write && write) {                                              \
+		vm_error = VM_INT_PF;                                                  \
 		irc_raise_interrupt(c->irc, ICR_PAGE_FAULT);                           \
 		return 0;                                                              \
 	}
