@@ -1,11 +1,15 @@
+#include <assert.h>
 #include <cpu.h>
 #include <inst.h>
 #include <interrupt.h>
+#include <ncurses.h>
 #include <paging.h>
+#include <stdio.h>
 #include <string.h>
 
 // TODO instructions that can't be ran in usermode
-// TODO use vreadN_u and vwriteN_u which checks for priviledges and raises interrupts
+// TODO use vreadN_u and vwriteN_u which checks for priviledges and raises
+// interrupts
 
 static inline uint64_t get_sp(struct core *c) {
 	return c->registers[c->registers[PPR] == 0 ? SP1 : SP0];
@@ -101,24 +105,24 @@ bool cpu_step(struct core *c) {
 			r1 = inst.register_imm.reg1;
 			c->registers[r1] = inst.register_imm.imm64;
 			break;
-		default: /* unreachable */
+		default:
 			break;
 		}
 		break;
-	
+
 	case STR:
 		switch (inst.type) {
-			case RR:
-				r1 = inst.register_register.reg1;
-				r2 = inst.register_register.reg1;
-				vwrite64(c, c->registers[r1], c->registers[r2]);
-				break;
-			case RI:
-				r1 = inst.register_imm.reg1;
-				vwrite64(c, inst.register_imm.imm64, c->registers[r1]);
-				break;
-			default:
-				break;
+		case RR:
+			r1 = inst.register_register.reg1;
+			r2 = inst.register_register.reg2;
+			vwrite64(c, c->registers[r1], c->registers[r2]);
+			break;
+		case RI:
+			r1 = inst.register_imm.reg1;
+			vwrite64(c, inst.register_imm.imm64, c->registers[r1]);
+			break;
+		default:
+			break;
 		}
 		break;
 
@@ -130,7 +134,7 @@ bool cpu_step(struct core *c) {
 			inst.register_register.reg2 != 0) {
 			/* fall through */
 		}
-		if ((inst.type == RR &&
+		if ((inst.opcode == DIV) && (inst.type == RR &&
 			 c->registers[inst.register_register.reg2] == 0)) {
 			irc_raise_interrupt(c->irc, ICR_DIV_BY_ZERO);
 			return true;

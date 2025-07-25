@@ -41,6 +41,7 @@ bool irc_raise_interrupt(struct irc *irc, uint16_t vector) {
 		return false;
 	}
 push:
+	fprintf(stderr, "Exception %d, pushing!\n", vector);
 
 	const uint64_t pc = irc->core->registers[PC];
 	const uint64_t imr = irc->core->registers[IMR];

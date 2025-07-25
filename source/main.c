@@ -2,17 +2,44 @@
 #include <fcntl.h>
 #include <inttypes.h>
 #include <ncurses.h>
+#include <pthread.h>
+#include <stdbool.h>
 #include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <sys/time.h>
+#include <time.h>
 #include <unistd.h>
 
 #include <cpu.h>
-#include <graphics.h>
 #include <inst.h>
 #include <interrupt.h>
+#include <mmio.h>
 #include <paging.h>
+
+#define FB_WIDTH 640
+#define FB_HEIGHT 480
+#define FB_PITCH (FB_WIDTH * 4)
+#define FB_SIZE (FB_HEIGHT * FB_PITCH) + 20
+#define FB_BASE 0x90000000UL
+#define STEPS_PER_UPDATE 10000U
+
+#define KBD_BASE (0x90010000UL)
+#define KBD_SIZE 0x10
+#define ICR_KEYB 11
+
+static struct core cpu;
+
+static inline bool safe_load_bool(volatile bool *ptr) {
+	bool val;
+	__asm__ volatile("movb %1, %0" : "=r"(val) : "m"(*ptr) : "memory");
+	return val;
+}
+
+static inline void safe_store_bool(volatile bool *ptr, bool val) {
+	__asm__ volatile("xchg %0, %1" : "+m"(*ptr) : "r"(val) : "memory");
+}
 
 static const char *reg_names[41] = {
 	"R0",	"R1",  "R2",  "R3",	 "R4",	"R5",  "R6",  "R7",	 "R8",
@@ -21,13 +48,147 @@ static const char *reg_names[41] = {
 	"R27",	"R28", "R29", "R30", "R31", "PC",  "SP1", "FR",	 "SP0",
 	"PPTR", "IMR", "ITR", "SLR", "PPR"};
 
-static const char *opcode_names[20] = {
-	"MOV", "ADD",  "SUB",	 "MUL",		"DIV",	"OR",	  "AND",
-	"NOT", "XOR",  "PUSH",	 "POP",		"CALL", "CMP",	  "CMOV",
-	"RET", "RETI", "SYSRET", "SYSCALL", "HLT",	"COANDSW"};
+static const char *opcode_names[21] = {
+	"MOV", "ADD",  "SUB",	 "MUL",		"DIV",	"OR",	   "AND",
+	"NOT", "XOR",  "PUSH",	 "POP",		"CALL", "CMP",	   "CMOV",
+	"RET", "RETI", "SYSRET", "SYSCALL", "HLT",	"COANDSW", "STR"};
 
 static const char *cmov_names[8] = {[NE] = "NE", [GT] = "GT", [LT] = "LT",
 									[EQ] = "EQ", [LE] = "LE", [GE] = "GE"};
+
+static SDL_Window *sdl_window = nullptr;
+static SDL_Renderer *sdl_renderer = nullptr;
+static SDL_Texture *sdl_texture = nullptr;
+static uint8_t *fb_mem = nullptr;
+
+static uint8_t kbd_buf[256];
+static size_t kbd_head = 0, kbd_tail = 0;
+
+static pthread_mutex_t kbd_mtx = PTHREAD_MUTEX_INITIALIZER;
+static bool kbd_pending = false;
+
+static volatile bool paused = true;
+static volatile bool snapshot_ready = false;
+static volatile bool halted_global = false;
+
+static pthread_mutex_t snap_mtx = PTHREAD_MUTEX_INITIALIZER;
+struct cpu_snapshot {
+	uint64_t regs[41];
+};
+static struct cpu_snapshot latest_snapshot;
+
+#define _DEBUG
+
+void *cpu_thread_func(void *arg) {
+	struct core *cpu = (struct core *)arg;
+	uint64_t step_count = 0;
+#ifdef _DEBUG
+	uint64_t interval_steps = 0;
+	struct timespec last_print_ts;
+	clock_gettime(CLOCK_MONOTONIC, &last_print_ts);
+#endif
+
+	while (!safe_load_bool(&halted_global)) {
+		bool raise_interrupt = false;
+		pthread_mutex_lock(&kbd_mtx);
+		if (kbd_pending) {
+			raise_interrupt = true;
+			kbd_pending = false;
+		}
+		pthread_mutex_unlock(&kbd_mtx);
+		if (raise_interrupt)
+			irc_raise_interrupt(cpu->irc, ICR_KEYB);
+
+		if (safe_load_bool(&paused)) {
+			struct timespec ts = {0, 1000000};
+			nanosleep(&ts, nullptr);
+			continue;
+		}
+
+		if (!cpu_step(cpu)) {
+			safe_store_bool(&halted_global, true);
+			step_count = 0;
+			pthread_mutex_lock(&snap_mtx);
+			memcpy(latest_snapshot.regs, cpu->registers,
+				   sizeof latest_snapshot.regs);
+			safe_store_bool(&snapshot_ready, true);
+			pthread_mutex_unlock(&snap_mtx);
+			break;
+		}
+
+#ifdef _DEBUG
+		interval_steps++;
+
+		struct timespec now;
+		clock_gettime(CLOCK_MONOTONIC, &now);
+		double elapsed = (now.tv_sec - last_print_ts.tv_sec) +
+						 (now.tv_nsec - last_print_ts.tv_nsec) / 1e9;
+		if (elapsed >= 1.0) {
+			double ips = interval_steps / elapsed;
+			fprintf(stderr, "[DEBUG] Clock speed: %.2f KHz\n", ips / 1e3);
+			interval_steps = 0;
+			last_print_ts = now;
+		}
+#endif
+
+		if (++step_count >= STEPS_PER_UPDATE) {
+			step_count = 0;
+			pthread_mutex_lock(&snap_mtx);
+			memcpy(latest_snapshot.regs, cpu->registers,
+				   sizeof latest_snapshot.regs);
+			safe_store_bool(&snapshot_ready, true);
+			pthread_mutex_unlock(&snap_mtx);
+		}
+	}
+
+	return nullptr;
+}
+
+static bool fb_mmio_read(struct core *, uintptr_t offset, void *buf,
+						 size_t len) {
+	if (offset >= FB_SIZE || offset + len > FB_SIZE)
+		return true;
+	memcpy(buf, fb_mem + offset, len);
+	return true;
+}
+
+static bool fb_mmio_write(struct core *, uintptr_t offset, const void *buf,
+						  size_t len) {
+	if (offset >= FB_SIZE || offset + len > FB_SIZE)
+		return true;
+	memcpy(fb_mem + offset, buf, len);
+	return true;
+}
+
+static bool kbd_mmio_read(struct core *, uintptr_t offset, void *buf,
+						  size_t len) {
+	if (offset >= KBD_SIZE || len != 1)
+		return true;
+	uint8_t *out = buf;
+
+	if (offset == 0) {
+		pthread_mutex_lock(&kbd_mtx);
+		*out = (kbd_head != kbd_tail) ? 1 : 0;
+		pthread_mutex_unlock(&kbd_mtx);
+		return true;
+	}
+	if (offset == 1) {
+		pthread_mutex_lock(&kbd_mtx);
+		if (kbd_head == kbd_tail) {
+			*out = 0;
+		} else {
+			*out = kbd_buf[kbd_tail++];
+			kbd_tail &= 255;
+		}
+		pthread_mutex_unlock(&kbd_mtx);
+		return true;
+	}
+	return true;
+}
+
+static bool kbd_mmio_write(struct core *, uintptr_t, const void *, size_t) {
+	return true;
+}
 
 static void format_inst(struct instruction *inst, uint64_t pc, char *buf,
 						size_t buf_sz) {
@@ -35,7 +196,6 @@ static void format_inst(struct instruction *inst, uint64_t pc, char *buf,
 					   opcode_names[inst->opcode]);
 	char *p = buf + off;
 	size_t rem = buf_sz - off;
-
 	switch (inst->type) {
 	case RR:
 		snprintf(p, rem, " %s, %s", reg_names[inst->register_register.reg1],
@@ -79,19 +239,52 @@ int main(int argc, char **argv) {
 		perror("fopen");
 		return 1;
 	}
-	fread(memory->mem + 0x7FFFFF, 1, memory->cap, f);
+	fread(memory->mem + 0x7FFF000, 1, memory->cap, f);
 	fclose(f);
 
-	struct core cpu;
 	cpu.mem = memory;
 	cpu.irc = malloc(sizeof *cpu.irc);
 	irc_init(cpu.irc, &cpu);
 	cpu_init(&cpu, memory);
-	cpu.registers[PC] = 0x7FFFFF;
+	cpu.registers[PC] = 0x7FFF000;
 	cpu.registers[PPTR] = 0;
 	cpu.registers[IMR] = 0;
 	cpu.registers[ITR] = 0;
-	graphics_init(&cpu);
+
+	freopen("stderr.txt", "w", stderr);
+	setvbuf(stderr, nullptr, _IONBF, 0);
+
+	fb_mem = calloc(1, FB_SIZE);
+	if (!fb_mem) {
+		fprintf(stderr, "Failed to allocate framebuffer\n");
+		return 1;
+	}
+	static struct mmio_hook fb_hook = {.base = FB_BASE,
+									   .size = FB_SIZE,
+									   .read = fb_mmio_read,
+									   .write = fb_mmio_write,
+									   .next = nullptr};
+	register_mmio_hook(&fb_hook);
+	static struct mmio_hook kbd_hook = {
+		.base = KBD_BASE,
+		.size = KBD_SIZE,
+		.read = kbd_mmio_read,
+		.write = kbd_mmio_write,
+		.next = nullptr,
+	};
+	register_mmio_hook(&kbd_hook);
+
+	if (SDL_Init(SDL_INIT_VIDEO) != 0) {
+		fprintf(stderr, "SDL_Init: %s\n", SDL_GetError());
+		return 1;
+	}
+	sdl_window =
+		SDL_CreateWindow("VGPU Framebuffer", SDL_WINDOWPOS_CENTERED,
+						 SDL_WINDOWPOS_CENTERED, FB_WIDTH, FB_HEIGHT, 0);
+	sdl_renderer = SDL_CreateRenderer(sdl_window, -1, SDL_RENDERER_ACCELERATED);
+	sdl_texture =
+		SDL_CreateTexture(sdl_renderer, SDL_PIXELFORMAT_ARGB8888,
+						  SDL_TEXTUREACCESS_STREAMING, FB_WIDTH, FB_HEIGHT);
 
 	initscr();
 	noecho();
@@ -102,54 +295,97 @@ int main(int argc, char **argv) {
 
 	int H, W;
 	getmaxyx(stdscr, H, W);
-
 	int col_w = W / 4;
-	int right_w = W - col_w * 3;
+	int right_w = W - 3 * col_w;
 	int top_h = H / 2;
 	int bot_h = H - top_h;
 
 	WINDOW *w_inst = newwin(H, col_w, 0, 0);
-	WINDOW *w_regs = newwin(H, col_w, 0, col_w);
+	WINDOW *w_regs = newwin(H, col_w, 0, col_w * 1);
 	WINDOW *w_mem = newwin(H, col_w, 0, col_w * 2);
 	WINDOW *w_stack = newwin(top_h, right_w, 0, col_w * 3);
 	WINDOW *w_page = newwin(bot_h, right_w, top_h, col_w * 3);
 
-	bool paused = false;
-	bool halted = false;
-	bool show_sp0 = false;
-	SDL_Event ev;
+	struct core ui_core = {};
+	memcpy(&ui_core, &cpu, sizeof(struct core));
 
-	while (!halted) {
+	pthread_t cpu_thread;
+	if (pthread_create(&cpu_thread, nullptr, cpu_thread_func, &cpu) != 0) {
+		fprintf(stderr, "Failed to launch CPU thread\n");
+		return 1;
+	}
+
+	const long FRAME_NS = 1000000000L / 60L;
+	struct timespec next_frame;
+	clock_gettime(CLOCK_MONOTONIC, &next_frame);
+
+	bool show_sp0 = false;
+
+	while (!safe_load_bool(&halted_global)) {
+	last_update:
+		next_frame.tv_nsec += FRAME_NS;
+		if (next_frame.tv_nsec >= 1000000000L) {
+			next_frame.tv_sec += 1;
+			next_frame.tv_nsec -= 1000000000L;
+		}
+		clock_nanosleep(CLOCK_MONOTONIC, TIMER_ABSTIME, &next_frame, nullptr);
+
+		SDL_Event ev;
+		while (SDL_PollEvent(&ev)) {
+			if (ev.type == SDL_QUIT) {
+				safe_store_bool(&halted_global, true);
+			} else if (ev.type == SDL_KEYDOWN) {
+				if (!safe_load_bool(&paused)) {
+					SDL_Keycode sym = ev.key.keysym.sym;
+					if (sym >= 0x20 && sym <= 0x7E) {
+						uint8_t c = (uint8_t)sym;
+						kbd_buf[kbd_head++] = c;
+						kbd_head &= 255;
+						pthread_mutex_lock(&kbd_mtx);
+						kbd_pending = true;
+						pthread_mutex_unlock(&kbd_mtx);
+					}
+				}
+			}
+		}
+
 		int ch = getch();
 		if (ch == 'q')
-			break;
-		if (ch == 'p')
-			paused = !paused;
-		if (ch == 't')
+			safe_store_bool(&halted_global, true);
+		else if (ch == 'p')
+			safe_store_bool(&paused, !safe_load_bool(&paused));
+		else if (ch == 't')
 			show_sp0 = !show_sp0;
 
-		if (!paused && !cpu_step(&cpu))
-			halted = true;
-
-		if (graphics_step(&ev)) {
+		if (safe_load_bool(&snapshot_ready)) {
+			pthread_mutex_lock(&snap_mtx);
+			memcpy(ui_core.registers, latest_snapshot.regs,
+				   sizeof ui_core.registers);
+			safe_store_bool(&snapshot_ready, false);
+			pthread_mutex_unlock(&snap_mtx);
 		}
+
+		SDL_UpdateTexture(sdl_texture, nullptr, fb_mem, FB_PITCH);
+		SDL_RenderClear(sdl_renderer);
+		SDL_RenderCopy(sdl_renderer, sdl_texture, nullptr, nullptr);
+		SDL_RenderPresent(sdl_renderer);
 
 		werase(w_inst);
 		box(w_inst, 0, 0);
 		mvwprintw(w_inst, 0, 2, " Disassembly ");
 		{
 			int rows = H - 2;
-			uint64_t pc = cpu.registers[PC];
+			uint64_t pc = ui_core.registers[PC];
 			uint64_t addr = pc;
 			struct instruction inst;
 			char linebuf[128];
 
 			for (int i = 0; i < rows; i++) {
 				uint64_t cur = addr;
-				uint64_t next = parse_instruction_ro(&cpu, &inst, addr);
+				uint64_t next = parse_instruction_ro(&ui_core, &inst, addr);
 
 				if (next == 0) {
-					uint8_t b = vread8(&cpu, addr);
+					uint8_t b = vread8(&ui_core, addr);
 					snprintf(linebuf, sizeof linebuf,
 							 "%016" PRIx64 ": [0x%02" PRIx8 "]", cur, b);
 					next = addr + 1;
@@ -207,7 +443,7 @@ int main(int argc, char **argv) {
 					int idx = c * per + r;
 					if (idx >= 41)
 						break;
-					uint64_t v = cpu.registers[idx];
+					uint64_t v = ui_core.registers[idx];
 					int y = 1 + r;
 					int x = 1 + c * col_wd;
 					if (idx == PC)
@@ -230,15 +466,18 @@ int main(int argc, char **argv) {
 			if (bpr < 1)
 				bpr = 1;
 			int mrows = H - 2;
-			uint64_t base = cpu.registers[PC] > (bpr * 2)
-								? cpu.registers[PC] - (bpr * 2)
+			uint64_t base = ui_core.registers[PC] > (bpr * 2)
+								? ui_core.registers[PC] - (bpr * 2)
 								: 0;
 			for (int r = 0; r < mrows; r++) {
 				uint64_t a = base + r * bpr;
 				mvwprintw(w_mem, 1 + r, 1, "%016" PRIx64 ":", a);
 				for (uint64_t b = 0; b < bpr; b++) {
-					uintptr_t phys = vaddr_to_phys(&cpu, a + b);
-					uint8_t byte = cpu.mem->mem[phys];
+					LOCK_MEM_READ();
+					uintptr_t phys =
+						vaddr_to_phys(&ui_core, a + b); // TODO manually lock
+					uint8_t byte = ui_core.mem->mem[phys];
+					UNLOCK_MEM();
 					mvwprintw(w_mem, 1 + r, 19 + b * 3, "%02" PRIx8, byte);
 				}
 			}
@@ -264,10 +503,10 @@ int main(int argc, char **argv) {
 
 		{
 			int srows = top_h - 2;
-			uint64_t sp = cpu.registers[show_sp0 ? SP0 : SP1];
+			uint64_t sp = ui_core.registers[show_sp0 ? SP0 : SP1];
 			for (int i = 0; i < srows; i++) {
 				uint64_t a = sp + i * sizeof(uint64_t);
-				uint64_t v = vread64(&cpu, a);
+				uint64_t v = vread64(&ui_core, a);
 				mvwprintw(w_stack, 1 + i, 1, "%016" PRIx64 ":%016" PRIx64, a,
 						  v);
 			}
@@ -279,10 +518,12 @@ int main(int argc, char **argv) {
 		mvwprintw(w_page, 0, 2, "Page");
 		{
 			int prow = bot_h - 2;
-			uint64_t base = cpu.registers[PC] & ~0xFFF;
+			uint64_t base = ui_core.registers[PC] & ~0xFFF;
 			for (int i = 0; i < prow; i++) {
 				uint64_t va = base + i * 0x1000;
-				uintptr_t pa = vaddr_to_phys_u(&cpu, va, false);
+				LOCK_MEM_READ();
+				uintptr_t pa = vaddr_to_phys_u(&ui_core, va, false);
+				UNLOCK_MEM();
 				if (pa == 0)
 					mvwprintw(w_page, 1 + i, 1, "%016" PRIx64 "-> FAULT", va);
 				else
@@ -291,12 +532,16 @@ int main(int argc, char **argv) {
 			}
 		}
 		wrefresh(w_page);
-
-		napms(50);
+	}
+	pthread_join(cpu_thread, nullptr);
+	static int fal = 1;
+	if (fal) {
+		fal = 0;
+		goto last_update;
 	}
 
 	nodelay(stdscr, FALSE);
-	mvprintw(H - 1, 2, "CPU halted or exception. Press any key to exit.");
+	mvprintw(H - 1, 2, "CPU halted. Press any key to exit.");
 	refresh();
 	getch();
 

@@ -3,6 +3,9 @@
 #include <interrupt.h>
 #include <paging.h>
 #include <sys/mman.h>
+#include <pthread.h>
+
+pthread_rwlock_t mem_rwlock = PTHREAD_RWLOCK_INITIALIZER;
 
 struct ram *init_memory(uintptr_t precomit) {
 	struct ram *mem = malloc(sizeof *mem);

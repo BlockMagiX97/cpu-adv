@@ -1,4 +1,5 @@
 #include <cpu.h>
+#include <inttypes.h>
 #include <mmio.h>
 #include <paging.h>
 #include <stdio.h>
@@ -23,11 +24,16 @@ bool unregister_mmio_hook(struct mmio_hook *h) {
 	return false;
 }
 
-bool handle_mmio_read(struct core *c, uintptr_t addr, void *buf, size_t len) {
-	for (struct mmio_hook *h = mmio_hooks; h; h = h->next) {
-		if (addr >= h->base && addr + len <= h->base + h->size)
-			return h->read(c, addr - h->base, buf, len);
+bool handle_mmio_read(struct core *c, uintptr_t paddr, void *buf, size_t len) {
+	struct mmio_hook *hook = NULL;
+
+	for (hook = mmio_hooks; hook; hook = hook->next) {
+		if (paddr >= hook->base && paddr + len <= hook->base + hook->size) {
+			uintptr_t offset = paddr - hook->base;
+			return hook->read(c, offset, buf, len);
+		}
 	}
+
 	return false;
 }
 

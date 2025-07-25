@@ -1,0 +1,2 @@
+[DEBUG] Clock speed: 0.00 KHz
+Exception 2, pushing!

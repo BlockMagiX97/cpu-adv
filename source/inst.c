@@ -68,6 +68,7 @@ uint64_t parse_instruction(struct core *c, struct instruction *inst,
 		case NOT:
 		case XOR:
 		case CMP:
+		case STR:
 			break;
 		default:
 			irc_raise_interrupt(c->irc, ICR_INVALID_OPCODE);
@@ -116,6 +117,7 @@ uint64_t parse_instruction(struct core *c, struct instruction *inst,
 		case NOT:
 		case XOR:
 		case CMP:
+		case STR:
 			break;
 		default:
 			irc_raise_interrupt(c->irc, ICR_INVALID_OPCODE);
