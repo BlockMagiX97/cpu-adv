@@ -1,2 +1,4390 @@
 [DEBUG] Clock speed: 0.00 KHz
-Exception 2, pushing!
+Exception 11, pushing!
+RETI pc = 7fff032
+[DEBUG] Clock speed: 4043.70 KHz
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+[DEBUG] Clock speed: 4117.14 KHz
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+[DEBUG] Clock speed: 4029.42 KHz
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+[DEBUG] Clock speed: 4128.29 KHz
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+[DEBUG] Clock speed: 4114.18 KHz
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+[DEBUG] Clock speed: 4005.32 KHz
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+[DEBUG] Clock speed: 4136.19 KHz
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+[DEBUG] Clock speed: 4222.78 KHz
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+[DEBUG] Clock speed: 4070.33 KHz
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+[DEBUG] Clock speed: 4057.57 KHz
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+[DEBUG] Clock speed: 4176.01 KHz
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+[DEBUG] Clock speed: 4095.91 KHz
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+[DEBUG] Clock speed: 4152.54 KHz
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+[DEBUG] Clock speed: 4197.48 KHz
+Exception 11, pushing!
+RETI pc = 7fff03c
+[DEBUG] Clock speed: 4146.58 KHz
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+[DEBUG] Clock speed: 4088.95 KHz
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+[DEBUG] Clock speed: 4066.42 KHz
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+[DEBUG] Clock speed: 4135.82 KHz
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+[DEBUG] Clock speed: 4094.25 KHz
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+[DEBUG] Clock speed: 4095.13 KHz
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+[DEBUG] Clock speed: 4105.39 KHz
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+[DEBUG] Clock speed: 4133.14 KHz
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+[DEBUG] Clock speed: 4205.30 KHz
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+[DEBUG] Clock speed: 4251.74 KHz
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+[DEBUG] Clock speed: 4094.53 KHz
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+[DEBUG] Clock speed: 4128.19 KHz
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+[DEBUG] Clock speed: 4042.77 KHz
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+[DEBUG] Clock speed: 4061.69 KHz
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+[DEBUG] Clock speed: 4060.06 KHz
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+[DEBUG] Clock speed: 4015.26 KHz
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+[DEBUG] Clock speed: 4033.74 KHz
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+[DEBUG] Clock speed: 4088.29 KHz
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+[DEBUG] Clock speed: 4198.53 KHz
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+[DEBUG] Clock speed: 4191.23 KHz
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+[DEBUG] Clock speed: 4159.10 KHz
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+[DEBUG] Clock speed: 4050.66 KHz
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+[DEBUG] Clock speed: 4004.01 KHz
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+[DEBUG] Clock speed: 4010.94 KHz
+Exception 11, pushing!
+RETI pc = 7fff032
+[DEBUG] Clock speed: 4122.73 KHz
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+[DEBUG] Clock speed: 4021.64 KHz
+[DEBUG] Clock speed: 4084.28 KHz
+[DEBUG] Clock speed: 4101.58 KHz
+[DEBUG] Clock speed: 4076.55 KHz
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+[DEBUG] Clock speed: 4156.29 KHz
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+[DEBUG] Clock speed: 4123.81 KHz
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+[DEBUG] Clock speed: 4132.84 KHz
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+[DEBUG] Clock speed: 4056.75 KHz
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+[DEBUG] Clock speed: 4137.41 KHz
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+[DEBUG] Clock speed: 4057.93 KHz
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+[DEBUG] Clock speed: 4103.27 KHz
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+[DEBUG] Clock speed: 4060.81 KHz
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+[DEBUG] Clock speed: 4147.04 KHz
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+[DEBUG] Clock speed: 4193.24 KHz
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+[DEBUG] Clock speed: 4159.88 KHz
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+[DEBUG] Clock speed: 4122.96 KHz
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+[DEBUG] Clock speed: 4084.77 KHz
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+[DEBUG] Clock speed: 4047.99 KHz
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+[DEBUG] Clock speed: 4083.66 KHz
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+[DEBUG] Clock speed: 4031.66 KHz
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+[DEBUG] Clock speed: 4114.28 KHz
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+[DEBUG] Clock speed: 4008.10 KHz
+Exception 11, pushing!
+RETI pc = 7fff046
+[DEBUG] Clock speed: 4031.29 KHz
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+[DEBUG] Clock speed: 3959.81 KHz
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+[DEBUG] Clock speed: 4008.65 KHz
+Exception 11, pushing!
+RETI pc = 7fff046
+[DEBUG] Clock speed: 4139.09 KHz
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+[DEBUG] Clock speed: 4033.32 KHz
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+[DEBUG] Clock speed: 4083.92 KHz
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+[DEBUG] Clock speed: 4126.00 KHz
+Exception 11, pushing!
+RETI pc = 7fff032
+[DEBUG] Clock speed: 4114.70 KHz
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+[DEBUG] Clock speed: 4094.15 KHz
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+[DEBUG] Clock speed: 4102.63 KHz
+[DEBUG] Clock speed: 4130.47 KHz
+[DEBUG] Clock speed: 4186.00 KHz
+[DEBUG] Clock speed: 4248.28 KHz
+[DEBUG] Clock speed: 4103.45 KHz
+[DEBUG] Clock speed: 4089.71 KHz
+[DEBUG] Clock speed: 4159.85 KHz
+[DEBUG] Clock speed: 4194.48 KHz
+[DEBUG] Clock speed: 4084.61 KHz
+[DEBUG] Clock speed: 4237.67 KHz
+[DEBUG] Clock speed: 4148.00 KHz
+[DEBUG] Clock speed: 4069.84 KHz
+[DEBUG] Clock speed: 4060.48 KHz
+[DEBUG] Clock speed: 4045.95 KHz
+[DEBUG] Clock speed: 4043.15 KHz
+[DEBUG] Clock speed: 4155.71 KHz
+[DEBUG] Clock speed: 4086.97 KHz
+[DEBUG] Clock speed: 4190.37 KHz
+[DEBUG] Clock speed: 4130.93 KHz
+[DEBUG] Clock speed: 4149.20 KHz
+[DEBUG] Clock speed: 4017.48 KHz
+[DEBUG] Clock speed: 4060.79 KHz
+[DEBUG] Clock speed: 4080.32 KHz
+[DEBUG] Clock speed: 4135.30 KHz
+[DEBUG] Clock speed: 4144.99 KHz
+[DEBUG] Clock speed: 4157.43 KHz
+[DEBUG] Clock speed: 4130.93 KHz
+[DEBUG] Clock speed: 4166.51 KHz
+[DEBUG] Clock speed: 4155.62 KHz
+[DEBUG] Clock speed: 4107.67 KHz
+[DEBUG] Clock speed: 4137.81 KHz
+[DEBUG] Clock speed: 4137.00 KHz
+[DEBUG] Clock speed: 4215.74 KHz
+[DEBUG] Clock speed: 4244.85 KHz
+[DEBUG] Clock speed: 4253.89 KHz
+[DEBUG] Clock speed: 4224.46 KHz
+[DEBUG] Clock speed: 4233.22 KHz
+[DEBUG] Clock speed: 4309.75 KHz
+[DEBUG] Clock speed: 4265.15 KHz
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+[DEBUG] Clock speed: 4266.15 KHz
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+[DEBUG] Clock speed: 4250.86 KHz
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+[DEBUG] Clock speed: 4280.21 KHz
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+[DEBUG] Clock speed: 4274.17 KHz
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+[DEBUG] Clock speed: 4168.43 KHz
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+[DEBUG] Clock speed: 4099.77 KHz
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+[DEBUG] Clock speed: 4186.38 KHz
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+[DEBUG] Clock speed: 4145.18 KHz
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+[DEBUG] Clock speed: 4122.18 KHz
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+[DEBUG] Clock speed: 4131.28 KHz
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+[DEBUG] Clock speed: 4182.25 KHz
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+[DEBUG] Clock speed: 4127.75 KHz
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+[DEBUG] Clock speed: 4117.98 KHz
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+[DEBUG] Clock speed: 4192.04 KHz
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+[DEBUG] Clock speed: 4080.35 KHz
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+[DEBUG] Clock speed: 4214.75 KHz
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+[DEBUG] Clock speed: 4280.75 KHz
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+[DEBUG] Clock speed: 4141.33 KHz
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+[DEBUG] Clock speed: 4182.99 KHz
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+[DEBUG] Clock speed: 4160.14 KHz
+Exception 11, pushing!
+RETI pc = 7fff032
+[DEBUG] Clock speed: 4133.73 KHz
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+[DEBUG] Clock speed: 4113.06 KHz
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+[DEBUG] Clock speed: 4186.61 KHz
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+[DEBUG] Clock speed: 4154.03 KHz
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+[DEBUG] Clock speed: 4107.82 KHz
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+[DEBUG] Clock speed: 4171.09 KHz
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+[DEBUG] Clock speed: 4267.51 KHz
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+[DEBUG] Clock speed: 4170.90 KHz
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+[DEBUG] Clock speed: 4219.52 KHz
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+[DEBUG] Clock speed: 4029.76 KHz
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+[DEBUG] Clock speed: 4130.13 KHz
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+[DEBUG] Clock speed: 4172.17 KHz
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+[DEBUG] Clock speed: 4133.24 KHz
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+[DEBUG] Clock speed: 4082.00 KHz
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+[DEBUG] Clock speed: 4086.33 KHz
+[DEBUG] Clock speed: 4125.32 KHz
+[DEBUG] Clock speed: 4163.36 KHz
+[DEBUG] Clock speed: 4165.44 KHz
+[DEBUG] Clock speed: 4136.83 KHz
+[DEBUG] Clock speed: 4214.53 KHz
+[DEBUG] Clock speed: 4277.59 KHz
+[DEBUG] Clock speed: 4191.82 KHz
+[DEBUG] Clock speed: 4204.01 KHz
+[DEBUG] Clock speed: 4170.43 KHz
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+[DEBUG] Clock speed: 4183.96 KHz
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+[DEBUG] Clock speed: 4103.83 KHz
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+[DEBUG] Clock speed: 4183.20 KHz
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+[DEBUG] Clock speed: 4085.09 KHz
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+[DEBUG] Clock speed: 4089.79 KHz
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+[DEBUG] Clock speed: 4187.87 KHz
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+[DEBUG] Clock speed: 4137.38 KHz
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+[DEBUG] Clock speed: 4056.75 KHz
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+[DEBUG] Clock speed: 4178.98 KHz
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+[DEBUG] Clock speed: 4128.87 KHz
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+[DEBUG] Clock speed: 4075.53 KHz
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+[DEBUG] Clock speed: 4236.85 KHz
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+[DEBUG] Clock speed: 4247.94 KHz
+[DEBUG] Clock speed: 4150.52 KHz
+[DEBUG] Clock speed: 4171.01 KHz
+[DEBUG] Clock speed: 4148.65 KHz
+[DEBUG] Clock speed: 4175.22 KHz
+[DEBUG] Clock speed: 4154.08 KHz
+[DEBUG] Clock speed: 4183.13 KHz
+[DEBUG] Clock speed: 4149.78 KHz
+[DEBUG] Clock speed: 4183.08 KHz
+[DEBUG] Clock speed: 4181.24 KHz
+[DEBUG] Clock speed: 4170.22 KHz
+[DEBUG] Clock speed: 4150.91 KHz
+[DEBUG] Clock speed: 4169.22 KHz
+[DEBUG] Clock speed: 4159.02 KHz
+[DEBUG] Clock speed: 4161.18 KHz
+[DEBUG] Clock speed: 4149.36 KHz
+[DEBUG] Clock speed: 4216.29 KHz
+[DEBUG] Clock speed: 4179.91 KHz
+[DEBUG] Clock speed: 4197.17 KHz
+[DEBUG] Clock speed: 4083.54 KHz
+[DEBUG] Clock speed: 4138.77 KHz
+[DEBUG] Clock speed: 4137.37 KHz
+[DEBUG] Clock speed: 4149.78 KHz
+[DEBUG] Clock speed: 4072.22 KHz
+[DEBUG] Clock speed: 4168.54 KHz
+[DEBUG] Clock speed: 4087.94 KHz
+[DEBUG] Clock speed: 4084.41 KHz
+[DEBUG] Clock speed: 4160.41 KHz
+[DEBUG] Clock speed: 4066.66 KHz
+[DEBUG] Clock speed: 4126.53 KHz
+[DEBUG] Clock speed: 4180.76 KHz
+[DEBUG] Clock speed: 4109.38 KHz
+Exception 11, pushing!
+RETI pc = 7fff03c
+[DEBUG] Clock speed: 4092.97 KHz
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+[DEBUG] Clock speed: 4061.65 KHz
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+[DEBUG] Clock speed: 4114.15 KHz
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+[DEBUG] Clock speed: 4106.52 KHz
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+[DEBUG] Clock speed: 4104.90 KHz
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+[DEBUG] Clock speed: 4001.29 KHz
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+[DEBUG] Clock speed: 4093.09 KHz
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+[DEBUG] Clock speed: 4062.34 KHz
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+[DEBUG] Clock speed: 4023.43 KHz
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+[DEBUG] Clock speed: 4125.79 KHz
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+[DEBUG] Clock speed: 4041.81 KHz
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+[DEBUG] Clock speed: 4022.38 KHz
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+[DEBUG] Clock speed: 4132.09 KHz
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+[DEBUG] Clock speed: 4269.31 KHz
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+[DEBUG] Clock speed: 4113.21 KHz
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+[DEBUG] Clock speed: 4101.94 KHz
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+[DEBUG] Clock speed: 4155.31 KHz
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+[DEBUG] Clock speed: 4078.12 KHz
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+[DEBUG] Clock speed: 3963.60 KHz
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+[DEBUG] Clock speed: 3730.92 KHz
+[DEBUG] Clock speed: 4190.87 KHz
+[DEBUG] Clock speed: 4157.61 KHz
+[DEBUG] Clock speed: 4150.27 KHz
+[DEBUG] Clock speed: 4146.28 KHz
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+[DEBUG] Clock speed: 4179.09 KHz
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+[DEBUG] Clock speed: 4125.01 KHz
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+[DEBUG] Clock speed: 4169.42 KHz
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+[DEBUG] Clock speed: 4091.15 KHz
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+[DEBUG] Clock speed: 4048.17 KHz
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+[DEBUG] Clock speed: 4039.95 KHz
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff046
+[DEBUG] Clock speed: 4097.65 KHz
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+[DEBUG] Clock speed: 4200.63 KHz
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+Exception 11, pushing!
+RETI pc = 7fff03c
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff032
+Exception 11, pushing!
+RETI pc = 7fff046
+[DEBUG] Clock speed: 4247.34 KHz
+[DEBUG] Clock speed: 4253.30 KHz
+[DEBUG] Clock speed: 4278.70 KHz
+[DEBUG] Clock speed: 4149.05 KHz
+[DEBUG] Clock speed: 4166.65 KHz
+[DEBUG] Clock speed: 4141.75 KHz
+[DEBUG] Clock speed: 4175.17 KHz
+[DEBUG] Clock speed: 4150.18 KHz
+[DEBUG] Clock speed: 4132.64 KHz
+[DEBUG] Clock speed: 4165.42 KHz
+[DEBUG] Clock speed: 4286.47 KHz
+[DEBUG] Clock speed: 4258.56 KHz

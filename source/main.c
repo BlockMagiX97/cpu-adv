@@ -162,9 +162,9 @@ static bool fb_mmio_write(struct core *, uintptr_t offset, const void *buf,
 
 static bool kbd_mmio_read(struct core *, uintptr_t offset, void *buf,
 						  size_t len) {
-	if (offset >= KBD_SIZE || len != 1)
+	if (offset >= KBD_SIZE || len != 8)
 		return true;
-	uint8_t *out = buf;
+	uint64_t *out = buf;
 
 	if (offset == 0) {
 		pthread_mutex_lock(&kbd_mtx);
@@ -172,7 +172,7 @@ static bool kbd_mmio_read(struct core *, uintptr_t offset, void *buf,
 		pthread_mutex_unlock(&kbd_mtx);
 		return true;
 	}
-	if (offset == 1) {
+	if (offset == 8) {
 		pthread_mutex_lock(&kbd_mtx);
 		if (kbd_head == kbd_tail) {
 			*out = 0;

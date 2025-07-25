@@ -314,21 +314,22 @@ bool cpu_step(struct core *c) {
 		return true;
 
 	case SYSRET:
-		sp = get_sp(c);
+		sp = c->registers[SP0];
 		c->registers[PC] = vread64(c, sp);
 		set_sp(c, sp + 8);
 		c->registers[PPR] = 1;
 		return true;
 
 	case RETI:
-		sp = get_sp(c);
+		sp = c->registers[SP0];
 		c->registers[PPR] = vread64(c, sp);
 		sp += 8;
 		c->registers[IMR] = vread64(c, sp);
 		sp += 8;
 		c->registers[PC] = vread64(c, sp);
 		sp += 8;
-		set_sp(c, sp);
+		fprintf(stderr, "RETI pc = %lx\n", c->registers[PC]);
+		c->registers[SP0] = sp;
 		c->irc->in_exception = false;
 		return true;
 
